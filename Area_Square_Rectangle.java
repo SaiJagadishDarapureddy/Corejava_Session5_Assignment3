@@ -1,26 +1,37 @@
-package shape_Areas1;
 
 public class Area_Square_Rectangle {
 
-	static Area_Square_Rectangle area;
+static int side;
+static int width;
 
-	void Area(int a){
+	Area_Square_Rectangle(int a){
+		side=a;
 		System.out.println("SIDE OF THESQUARE IS " +a);
-		System.out.println("AREA OF THE SQUARE IS " +(a*a));
+		
 	}
 	
-	void Area(int a, int b){
+	Area_Square_Rectangle(int a, int b){
+		side=a;
+		width=b;
 		System.out.println("LENGTH OF THE RECTANGLE IS " +a);
 		System.out.println("WIDTH OF THE TRIANGLE IS " +b);
-		System.out.println("AREA OF THE TRIANGLE IS " +(a*b));
 		}
-		
+	void display1(){
+		System.out.println("AREA OF THE SQUARE IS " +(side*side));
+	}
+	void display2(){
+		System.out.println("AREA OF THE TRIANGLE IS " +(side*width));
+	}
 	public static void main(String[] args) {
 		
-		Area_Square_Rectangle.area = new Area_Square_Rectangle();	
-		area.Area(5);
+		Area_Square_Rectangle area1 = new Area_Square_Rectangle(10);
+		
+		area1.display1();
+		
 		System.out.println("**********************************************");
-		area.Area(10, 15);
+		
+		Area_Square_Rectangle area2 = new Area_Square_Rectangle(10, 15);
+		area2.display2();
+		
 	}
 }
-
